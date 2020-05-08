@@ -18,26 +18,15 @@ body {
   width: 100%;
   position: relative;
 }
-/* .btn:-webkit-full-screen {
-  display: none;
+/* .player:fullscreen .controls {
+  visibility: hidden;
 }
-
-.btn:-moz-full-screen {
-  display: none;
-}
-
-.btn:-ms-fullscreen {
-  display: none;
-}
-.btn:fullscreen {
-  /* width: 100%; */
-
-body::backdrop {
-  background-color: #666;
+.player:fullscreen .video:hover .controls {
+  visibility: visible;
 }
 h1 {
   color: #fff;
-}
+} */
 .screen {
   cursor: pointer;
   width: 60%;
