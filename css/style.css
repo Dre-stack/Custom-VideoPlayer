@@ -4,56 +4,55 @@
 }
 body {
   font-family: "Questrial", sans-serif;
-  background-color: #666;
   display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+h1 {
+  color: #ffffff;
+  position: absolute;
+  top: 30px;
 }
 .player {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+  width: 60%;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
-/* .player:fullscreen .controls {
-  visibility: hidden;
+.player:hover .controls {
+  transform: translateY(0);
 }
-.player:fullscreen .video:hover .controls {
-  visibility: visible;
-}
-h1 {
-  color: #fff;
-} */
 .screen {
-  cursor: pointer;
-  width: 60%;
-  background-color: #000 !important;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  width: 100%;
+  background-color: black !important;
+  border-radius: 10px;
 }
-
 .controls {
-  background-color: rgba (0, 0, 0, 0.5);
-  color: #fff;
-  width: 60%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
+  padding: 5px;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
 }
-.controls .btn {
-  border: 0;
-  background: transparent;
+.btn {
   cursor: pointer;
+  background: transparent;
+  border: 0;
+  color: rgba(27, 27, 51, 1);
 }
 .btn:focus {
   outline: 0;
@@ -68,19 +67,13 @@ h1 {
   color: #fff;
 }
 .skip {
-  color: #8a8683;
+  color: #fff;
 }
-/* .fa-backward {
-  color: #8a8683; */
-
 .timestamp {
   color: #fff;
   font-weight: bold;
   margin-left: 10px;
 }
-@media (max-width: 800px) {
-  .screen,
-  .controls {
-    width: 90%;
-  }
+.player:fullscreen .screen {
+  height: 100%;
 }

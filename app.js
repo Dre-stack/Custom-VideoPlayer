@@ -65,7 +65,7 @@ function updateProgress() {
 function setVideoProgress() {
   video.currentTime = (progress.value * video.duration) / 100;
 }
-// to rewind and forwar the video
+// to rewind and forward the video
 
 let intervalRwd;
 let intervalFwd;
@@ -175,3 +175,10 @@ stop.addEventListener("click", stopVideo);
 
 progress.addEventListener("change", setVideoProgress);
 fullScreen.addEventListener("click", toggleFullscreen);
+
+document.onkeydown = function (evt) {
+  evt = evt || window.event;
+  if (evt.keyCode == 13) {
+    toggleFullscreen();
+  }
+};
