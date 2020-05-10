@@ -29,6 +29,33 @@ h1 {
 }
 .player:hover .controls {
   transform: translateY(0);
+  animation: hideControls 4s forwards;
+}
+.player:hover {
+  animation: hideMouse 4s forwards;
+}
+
+@keyframes hideMouse {
+  0% {
+    cursor: pointer;
+  }
+  99.5% {
+    cursor: pointer;
+  }
+  100% {
+    cursor: none;
+  }
+}
+@keyframes hideControls {
+  0% {
+    transform: translateY(0);
+  }
+  99% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 .screen {
   width: 100%;
