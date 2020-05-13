@@ -54,7 +54,7 @@ h1 {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(120%);
   }
 }
 .screen {
@@ -72,7 +72,7 @@ h1 {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 5px;
-  transform: translateY(100%);
+  transform: translateY(120%);
   transition: all 0.3s ease-in-out;
 }
 .btn {
@@ -103,4 +103,9 @@ h1 {
 }
 .player:fullscreen .screen {
   height: 100%;
+}
+@media (max-width: 800px) {
+  .player {
+    width: 90%;
+  }
 }

@@ -22,9 +22,9 @@ function toggleVideoStatus() {
 //update play/pause icon
 function updatePlayIcon() {
   if (video.paused) {
-    play.innerHTML = '<i class="fas fa-play fa-2x"></i>';
+    play.innerHTML = '<i class="fas fa-play "></i>';
   } else {
-    play.innerHTML = '<i class="fas fa-pause fa-2x"></i>';
+    play.innerHTML = '<i class="fas fa-pause "></i>';
   }
 }
 
@@ -135,7 +135,7 @@ function videoSkipFwd() {
 function toggleFullscreen() {
   if (!document.fullscreenElement) {
     player.requestFullscreen();
-    fullScreen.innerHTML = '<i class="fas fa-compress-alt fa-2x"></i>';
+    fullScreen.innerHTML = '<i class="fas fa-compress-alt "></i>';
     // } else if (player.mozRequestFullScreen) {
     //   /* Firefox */
     //   player.mozRequestFullScreen();
@@ -147,7 +147,7 @@ function toggleFullscreen() {
     //   player.msRequestFullscreen();
   } else {
     if (document.exitFullscreen) document.exitFullscreen();
-    fullScreen.innerHTML = '<i class="fas fa-arrows-alt fa-2x"></i>';
+    fullScreen.innerHTML = '<i class="fas fa-arrows-alt "></i>';
   }
 }
 
